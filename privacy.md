@@ -10,7 +10,7 @@ Luma discovers compatible TVs on your local network and sends commands, pairing 
 
 ## Diagnostics and permissions
 
-The app keeps a bounded, in-memory diagnostic list of event types and timestamps for connection troubleshooting. It does not automatically upload these diagnostics to the developer. The app requests network-related permissions and, on supported Android versions, local-network permission for TV discovery/control. It includes Samsung’s WRITE_USE_APP_FEATURE_SURVEY permission for Galaxy compatibility; Luma does not add its own Samsung survey event sender. Luma does not request contacts, camera, microphone or precise-location permission.
+The app keeps a bounded, in-memory diagnostic list of event types and timestamps for connection troubleshooting. It does not automatically upload these diagnostics to the developer. The app requests network-related permissions and, on supported Android versions, local-network permission for TV discovery/control. It includes Samsung’s WRITE_USE_APP_FEATURE_SURVEY permission for Galaxy compatibility; Luma does not add its own Samsung survey event sender. Luma does not request contacts, camera, microphone or precise-location permission. The merged manifest also declares AD_ID and READ_BASIC_PHONE_STATE from Google’s advertising SDK, and FOREGROUND_SERVICE/WAKE_LOCK from bundled Cast/background components.
 
 ## Remote configuration and hosted pages
 
