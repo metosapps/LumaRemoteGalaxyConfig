@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "application_id": "com.luma.smartremote",
+  "platform": "android",
+  "store": "galaxy_store",
+  "revision": 1,
+  "cache_ttl_seconds": 21600,
+  "global": {
+    "maintenance_mode": false,
+    "maintenance_message": "Luma Remote is temporarily unavailable. Please try again later."
+  },
+  "android": {
+    "galaxy_store": {
+      "min_supported_version_code": 1,
+      "latest_version_code": 9,
+      "update_mode": "none",
+      "update_message": "Please update Luma Remote in Galaxy Store.",
+      "update_url": "https://galaxystore.samsung.com/detail/com.luma.smartremote"
+    }
+  },
+  "links": {
+    "support_email": "chennoufo11@gmail.com",
+    "privacy_policy": "https://metosapps.github.io/LumaRemoteGalaxyConfig/privacy.html",
+    "terms": "https://metosapps.github.io/LumaRemoteGalaxyConfig/terms.html",
+    "website": "https://metosapps.github.io/LumaRemoteGalaxyConfig/",
+    "help": "https://metosapps.github.io/LumaRemoteGalaxyConfig/",
+    "rating_url": "https://galaxystore.samsung.com/detail/com.luma.smartremote"
+  },
+  "features": {
+    "reward_offer": true
+  },
+  "kill_switches": {
+    "ads_enabled": true,
+    "iap_enabled": true
+  },
+  "ads": {
+    "enabled": false,
+    "test_enabled": true,
+    "app_id": "ca-app-pub-3289974964220873~6139840770",
+    "placements": {
+      "banner": {
+        "enabled": true,
+        "unit_id": ""
+      },
+      "native": {
+        "enabled": true,
+        "unit_id": ""
+      },
+      "interstitial": {
+        "enabled": true,
+        "unit_id": ""
+      },
+      "rewarded": {
+        "enabled": true,
+        "unit_id": ""
+      },
+      "rewarded_interstitial": {
+        "enabled": true,
+        "unit_id": ""
+      },
+      "app_open": {
+        "enabled": true,
+        "unit_id": ""
+      }
+    },
+    "fullscreen_interval_seconds": 300,
+    "app_open_interval_seconds": 600
+  }
+}
