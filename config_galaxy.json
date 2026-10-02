@@ -3,7 +3,7 @@
   "application_id": "com.luma.smartremote",
   "platform": "android",
   "store": "galaxy_store",
-  "revision": 2,
+  "revision": 3,
   "cache_ttl_seconds": 21600,
   "global": {
     "maintenance_mode": false,
@@ -30,7 +30,7 @@
     "reward_offer": true
   },
   "kill_switches": {
-    "ads_enabled": false,
+    "ads_enabled": true,
     "iap_enabled": true
   },
   "ads": {
