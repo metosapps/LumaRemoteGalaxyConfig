@@ -20,3 +20,9 @@ Remote automatic frequency limits can only be increased from their compiled safe
 `update_mode` is `none`, `soft` or `force`; update URLs must match this exact Galaxy listing. Do not force-update until the target binary is live and available to intended users. `global.maintenance_mode` blocks entry when needed. `links` controls support and policy destinations. `features.reward_offer` controls the voluntary offer. `kill_switches.iap_enabled` only stops new Buy actions; it does not revoke verified benefits or disable Restore.
 
 Run `python3 validate_config.py` before pushing. CI validates the configuration. Increment revision for every operational change; revert behavior with a newer revision rather than rolling revision backward. Verify both the deployed JSON and the app's actual fetched/cache state after a change; a Git commit alone does not establish CDN propagation.
+
+## Pro tools (native app 1.7.0 / code 10)
+
+`features.pro_macros`, `features.pro_custom_remote` and `features.pro_widgets` are independent kill switches for features compiled into the app. They do not grant Pro, install code or supply Samsung ownership. Basic TV controls and Restore remain available independently. Scene execution stops if its flag is disabled. The controls open only in app versions that contain the native features; previous clients ignore these additional keys.
+
+Revision4 keeps production advertising disabled, all real ad units empty, minimum supported version1 and update mode none. Latest code10 describes the local build, not a claim that Galaxy Store has published it. No forced update is configured.

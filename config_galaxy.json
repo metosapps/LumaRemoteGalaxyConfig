@@ -3,7 +3,7 @@
   "application_id": "com.luma.smartremote",
   "platform": "android",
   "store": "galaxy_store",
-  "revision": 3,
+  "revision": 4,
   "cache_ttl_seconds": 21600,
   "global": {
     "maintenance_mode": false,
@@ -12,7 +12,7 @@
   "android": {
     "galaxy_store": {
       "min_supported_version_code": 1,
-      "latest_version_code": 9,
+      "latest_version_code": 10,
       "update_mode": "none",
       "update_message": "Please update Luma Remote in Galaxy Store.",
       "update_url": "https://galaxystore.samsung.com/detail/com.luma.smartremote"
@@ -27,7 +27,10 @@
     "rating_url": "https://galaxystore.samsung.com/detail/com.luma.smartremote"
   },
   "features": {
-    "reward_offer": true
+    "reward_offer": true,
+    "pro_macros": true,
+    "pro_custom_remote": true,
+    "pro_widgets": true
   },
   "kill_switches": {
     "ads_enabled": true,

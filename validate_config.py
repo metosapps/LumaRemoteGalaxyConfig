@@ -22,6 +22,7 @@ for p in a['placements'].values():
  if a['enabled'] and p['enabled']:assert unit
 assert len(ids)==len(set(ids))
 for key in ['enabled','test_enabled']:assert type(a[key]) is bool
+for key in ['reward_offer','pro_macros','pro_custom_remote','pro_widgets']:assert type(j['features'][key]) is bool
 for value in j['kill_switches'].values():assert type(value) is bool
 for key,value in j['links'].items():
  if key=='support_email':assert re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+',value)
