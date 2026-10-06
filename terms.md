@@ -1,8 +1,8 @@
-# Luma Remote — Terms of Use
+# Smart TV Remote Control — Terms of Use
 
 ## Agreement and contact
 
-These terms cover Luma Remote (com.luma.smartremote), provided by the independent Luma Remote developer (GitHub: metosapps). Effective date: 2 October 2026. Contact: chennoufo11@gmail.com. Use the app in accordance with these terms and applicable law. Mandatory consumer rights remain unaffected.
+These terms cover Smart TV Remote Control (com.luma.smartremote), provided by the independent Smart TV Remote Control developer (GitHub: metosapps). Effective date: 2 October 2026. Contact: chennoufo11@gmail.com. Use the app in accordance with these terms and applicable law. Mandatory consumer rights remain unaffected.
 
 ## Authorized use
 
@@ -18,11 +18,11 @@ The free app may show ads in eligible screens or natural transitions. Ad availab
 
 ## Pro purchases and subscriptions
 
-When configured and available in your storefront, Pro may be offered as one payment, a monthly subscription or a yearly subscription. All provide the displayed Pro benefits, including removing ads. Prices, currency, tax information, billing period and renewal terms shown by Samsung at checkout apply. Monthly and yearly plans renew automatically until canceled according to Galaxy Store rules. Manage or cancel in Galaxy Store; uninstalling Luma does not cancel a subscription. Cancellation normally retains benefits through the store-confirmed paid period. Refunds are handled under Samsung’s policies and applicable consumer law; these terms do not waive mandatory rights.
+When configured and available in your storefront, Pro may be offered as one payment, a monthly subscription or a yearly subscription. All provide the displayed Pro benefits, including removing ads. Prices, currency, tax information, billing period and renewal terms shown by Samsung at checkout apply. Monthly and yearly plans renew automatically until canceled according to Galaxy Store rules. Manage or cancel in Galaxy Store; uninstalling the app does not cancel a subscription. Cancellation normally retains benefits through the store-confirmed paid period. Refunds are handled under Samsung’s policies and applicable consumer law; these terms do not waive mandatory rights.
 
 ## Ownership verification and restore
 
-Use Restore to query and verify the purchases owned by the current Samsung account. Internet access and the matching store/account are needed. Verified Pro may work offline for up to seven days, capped by a subscription’s paid-period end; reconnect to refresh ownership. Invalidated/refunded ownership or expiration can remove benefits. A purchase callback alone cannot unlock Pro. Access can be delayed if store verification is unavailable. Luma does not guarantee sharing purchases across different stores or app packages.
+Use Restore to query and verify the purchases owned by the current Samsung account. Internet access and the matching store/account are needed. Verified Pro may work offline for up to seven days, capped by a subscription’s paid-period end; reconnect to refresh ownership. Invalidated/refunded ownership or expiration can remove benefits. A purchase callback alone cannot unlock Pro. Access can be delayed if store verification is unavailable. The app does not guarantee sharing purchases across different stores or app packages.
 
 ## Updates and remote configuration
 
