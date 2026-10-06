@@ -3,18 +3,18 @@
   "application_id": "com.luma.smartremote",
   "platform": "android",
   "store": "galaxy_store",
-  "revision": 4,
+  "revision": 5,
   "cache_ttl_seconds": 21600,
   "global": {
     "maintenance_mode": false,
-    "maintenance_message": "Luma Remote is temporarily unavailable. Please try again later."
+    "maintenance_message": "Smart TV Remote Control is temporarily unavailable. Please try again later."
   },
   "android": {
     "galaxy_store": {
       "min_supported_version_code": 1,
-      "latest_version_code": 10,
+      "latest_version_code": 12,
       "update_mode": "none",
-      "update_message": "Please update Luma Remote in Galaxy Store.",
+      "update_message": "Please update Smart TV Remote Control in Galaxy Store.",
       "update_url": "https://galaxystore.samsung.com/detail/com.luma.smartremote"
     }
   },
@@ -33,12 +33,12 @@
     "pro_widgets": true
   },
   "kill_switches": {
-    "ads_enabled": true,
+    "ads_enabled": false,
     "iap_enabled": true
   },
   "ads": {
     "enabled": false,
-    "test_enabled": true,
+    "test_enabled": false,
     "app_id": "ca-app-pub-3289974964220873~6139840770",
     "placements": {
       "banner": {

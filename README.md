@@ -34,3 +34,7 @@ The root page introduces Smart TV Remote Control, its supported Wi-Fi controls, 
 The Galaxy Store CTA currently says **Coming to Galaxy Store**. Replace it with the verified public listing link after release. Screenshots are previews; no universal compatibility, verified production billing, live ads or store publication is implied. No trackers, signup forms or external fonts were added.
 
 `index.html`, `style.css` and `site.js` are static; GitHub Pages publishes them directly. Gallery scrolling and FAQ answers remain accessible without JavaScript. Validate layout at desktop and phone widths, verify all local assets and policy links, then run `python3 validate_config.py` before publishing. Website-only updates do not change the configuration revision.
+
+## Pre-release advertising hold (revision 5)
+
+Production and demo advertising are disabled (`ads.enabled=false`, `ads.test_enabled=false`, `kill_switches.ads_enabled=false`). Pro feature switches and IAP remain enabled. Latest code12 identifies the local1.7.2 build; it does not claim Galaxy Store publication. Update mode remains `none`. Enable advertising only after this exact app is live and the publisher authorizes it, with real per-format units and applicable consent configured.
