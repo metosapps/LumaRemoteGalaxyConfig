@@ -14,6 +14,8 @@ assert v['update_mode'] in ['none','soft','force']
 assert v['update_url']=='https://galaxystore.samsung.com/detail/com.luma.smartremote'
 assert j['ads']['app_id']=='ca-app-pub-3289974964220873~6139840770'
 a=j['ads'];assert 300<=a['fullscreen_interval_seconds']<=3600 and 600<=a['app_open_interval_seconds']<=7200
+for key,minimum,maximum in [('interstitial_interval_seconds',60,3600),('interstitial_every_n_actions',2,20),('interstitial_max_per_session',1,50),('interstitial_initial_grace_seconds',60,600),('interstitial_notice_ms',1000,3000)]:
+ if key in a:assert type(a[key]) is int and minimum<=a[key]<=maximum
 assert set(a['placements'])=={'banner','native','interstitial','rewarded','rewarded_interstitial','app_open'}
 ids=[]
 for p in a['placements'].values():

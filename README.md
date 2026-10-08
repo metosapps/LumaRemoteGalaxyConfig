@@ -15,7 +15,7 @@ Before enabling production: confirm this exact signed Galaxy app is live, config
 
 Clients fetch on launch, on foreground after a one-minute request throttle, and every 15 minutes while the process remains alive. Timeout is 12 seconds with five-second connection/read limits, a 64 KiB body limit, no HTTP redirects, strict package/store/schema/publisher checks, and revision rollback rejection. Last-known-good cache is available for up to `cache_ttl_seconds` (six hours by default, maximum one day). Expired/future-dated cache disables ads. Bundled defaults and cached policy still permit normal offline launch unless an explicit cached maintenance/force-update decision applies. Restoring purchases and existing Pro ownership are preserved if new purchases are remotely disabled.
 
-Remote automatic frequency limits can only be increased from their compiled safe minimum: fullscreen >=300 seconds and App Open >=600 seconds. Reward duration is compiled: 30 minutes through version 1.7.3 and 120 minutes from version 1.7.4. Native NO_FILL does not block controls. UMP permission and verified Pro always take precedence over remote flags.
+Legacy shared fullscreen frequency stays >=300 seconds and App Open >=600 seconds. Version 1.7.5 adds separate bounded interstitial controls below. Reward duration is compiled: 30 minutes through version 1.7.3 and 120 minutes from version 1.7.4. Native NO_FILL does not block controls. UMP permission and verified Pro always take precedence over remote flags.
 
 `update_mode` is `none`, `soft` or `force`; update URLs must match this exact Galaxy listing. Do not force-update until the target binary is live and available to intended users. `global.maintenance_mode` blocks entry when needed. `links` controls support and policy destinations. `features.reward_offer` controls the voluntary offer. `kill_switches.iap_enabled` only stops new Buy actions; it does not revoke verified benefits or disable Restore.
 
@@ -50,3 +50,21 @@ To turn advertisements off, set `kill_switches.ads_enabled=false` and `ads.enabl
 ## Native advertising update 1.7.4 / code 14
 
 The signed local build grants two hours without any ads after a completed optional reward, and creates interstitial opportunities when returning to Devices after at least two navigation actions. The five-minute fullscreen and ten-minute App Open minimums remain. A connected TV no longer blocks advertisements in Devices or Settings; pairing, reconnecting and TV-control screens remain protected. No store upload or publication is implied. Public policies disclose both old and new reward durations. Both AdMob reward units describe one `Ad-free session` so their shared metadata remains correct for old and new app versions; the app explains the version-specific duration before opting in. Configuration revision 6, production unit IDs and update settings are unchanged.
+
+## Interstitial frequency controls (1.7.5 / code 15)
+
+These optional keys under `ads` are read by code 15 and later. Earlier APKs ignore them and retain their existing limits; keep the legacy `fullscreen_interval_seconds` at 300 or more. App Open keeps its ten-minute minimum. No timer schedules interstitials: eligibility is checked only when returning to Devices after navigation. A shorter interval creates more opportunities, not a guaranteed number of impressions.
+
+| Key | Current value | Accepted range / meaning |
+|---|---:|---|
+| `interstitial_interval_seconds` | 120 | 60–3600; minimum since any fullscreen ad attempt |
+| `interstitial_every_n_actions` | 2 | 2–20 navigation actions since the last automatic fullscreen ad |
+| `interstitial_max_per_session` | 20 | 1–50 interstitial attempts per app process; resets after process restart |
+| `interstitial_initial_grace_seconds` | 120 | 60–600 after starting the process |
+| `interstitial_notice_ms` | 1000 | 1000–3000; localized Showing ads notice before a ready interstitial |
+
+For more opportunities set interval to 60, actions to 2 and session limit to 20. For fewer use interval 600, actions 6 and limit 5. To disable use `ads.placements.interstitial.enabled=false`. Consent, verified Pro, two-hour reward pauses, background, pairing, TV controls, dialogs and purchase gates remain mandatory. Google requires at most one interstitial for every two user actions and natural breaks; interval limits are app design choices, not Google guarantees: https://support.google.com/admob/answer/6201362?hl=en .
+
+The notice starts only for already-loaded inventory. It is cancelled on Back/dismissal, background, route change, invalid host, consent/Pro/pairing change or configuration change. The ad is rechecked after the notice; expired opportunities never appear later. No notice is displayed for no-fill. All 20 app languages include this label. Reward pauses remain 120 minutes and are not controlled by these frequency keys.
+
+Edit this package's `config_galaxy.json`, increase `revision`, run `python3 validate_config.py`, commit/push and verify the Pages endpoint. Do not change the App ID, unit IDs or store update fields to tune frequency. The client refreshes on launch/foreground (maximum once per minute) and every 15 minutes during continuous use; publication and client fetching are separate checks. Version code 15 is a local signed release candidate until uploaded/reviewed in Galaxy Store. These controls cannot add this behavior to an older APK.

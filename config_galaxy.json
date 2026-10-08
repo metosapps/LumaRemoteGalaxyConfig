@@ -3,7 +3,7 @@
   "application_id": "com.luma.smartremote",
   "platform": "android",
   "store": "galaxy_store",
-  "revision": 6,
+  "revision": 7,
   "cache_ttl_seconds": 21600,
   "global": {
     "maintenance_mode": false,
@@ -67,6 +67,11 @@
       }
     },
     "fullscreen_interval_seconds": 300,
-    "app_open_interval_seconds": 600
+    "app_open_interval_seconds": 600,
+    "interstitial_interval_seconds": 120,
+    "interstitial_every_n_actions": 2,
+    "interstitial_max_per_session": 20,
+    "interstitial_initial_grace_seconds": 120,
+    "interstitial_notice_ms": 1000
   }
 }
