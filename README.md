@@ -38,3 +38,11 @@ The Galaxy Store CTA currently says **Coming to Galaxy Store**. Replace it with 
 ## Pre-release advertising hold (revision 5)
 
 Production and demo advertising are disabled (`ads.enabled=false`, `ads.test_enabled=false`, `kill_switches.ads_enabled=false`). Pro feature switches and IAP remain enabled. Latest code12 identifies the local1.7.2 build; it does not claim Galaxy Store publication. Update mode remains `none`. Enable advertising only after this exact app is live and the publisher authorizes it, with real per-format units and applicable consent configured.
+
+## Production advertising configuration (revision 6, 2026-10-08)
+
+The exact Galaxy listing `com.luma.smartremote` / Content ID `000009310242` was verified as For Sale, and the publisher explicitly requested activation. Six separate production ad units were created and verified in publisher `pub-3289974964220873`, under app `ca-app-pub-3289974964220873~6139840770` (AdMob display name `Remote1Codex`). Both production switches are on; test ads remain off. Pro ownership, consent, lifecycle, reward opt-in and frequency caps still gate ad requests. Existing compatible APKs can fetch this configuration without a new binary.
+
+**Serving is currently blocked by AdMob**, separately from these remote flags: Policy center reports `Disabled ad serving` / `App store verification` for this exact package. The Samsung store link is correct, and AdMob reports that another review was requested on October 8, 2026. No serving approval or real impression has been verified. Eligible clients will use these units after Google clears the issue; do not treat configuration activation as Google approval.
+
+To turn advertisements off, set `kill_switches.ads_enabled=false` and `ads.enabled=false`, increment revision beyond the current deployed value, validate, deploy, and verify the published endpoint. Do not roll back to revision 5.

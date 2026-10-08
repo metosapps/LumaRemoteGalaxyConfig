@@ -3,7 +3,7 @@
   "application_id": "com.luma.smartremote",
   "platform": "android",
   "store": "galaxy_store",
-  "revision": 5,
+  "revision": 6,
   "cache_ttl_seconds": 21600,
   "global": {
     "maintenance_mode": false,
@@ -33,37 +33,37 @@
     "pro_widgets": true
   },
   "kill_switches": {
-    "ads_enabled": false,
+    "ads_enabled": true,
     "iap_enabled": true
   },
   "ads": {
-    "enabled": false,
+    "enabled": true,
     "test_enabled": false,
     "app_id": "ca-app-pub-3289974964220873~6139840770",
     "placements": {
       "banner": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/9481664887"
       },
       "native": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/3907930690"
       },
       "interstitial": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/2153839200"
       },
       "rewarded": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/2594849028"
       },
       "rewarded_interstitial": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/1281767354"
       },
       "app_open": {
         "enabled": true,
-        "unit_id": ""
+        "unit_id": "ca-app-pub-3289974964220873/6145055107"
       }
     },
     "fullscreen_interval_seconds": 300,
